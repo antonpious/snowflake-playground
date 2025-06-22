@@ -24,3 +24,12 @@ For the Password create an entry in the ~/.zshrc file
 `snowsql -a <your org account id> -u <Your Username>`  
 
 The password would be automatically picked up.
+
+
+Short cut to execute the SQL at the given line is  Snow
+
+
+For running the current line in query  Snowsight editor 
+`Cmd + enter`   
+
+

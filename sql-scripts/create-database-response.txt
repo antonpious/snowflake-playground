@@ -1,0 +1,45 @@
+
+CREATE OR REPLACE DATABASE playground;
++-------------------------------------------+                                   
+| status                                    |
+|-------------------------------------------|
+| Database PLAYGROUND successfully created. |
++-------------------------------------------+
+
+CREATE OR REPLACE SCHEMA humanresources;
++---------------------------------------------+                                 
+| status                                      |
+|---------------------------------------------|
+| Schema HUMANRESOURCES successfully created. |
++---------------------------------------------+
+
+CREATE OR REPLACE TABLE employee (
+                                    first_name STRING,
+                                    last_name STRING,
+                                    email STRING,
+                                    street_address STRING,
+                                    city STRING,
+                                    start_data DATE
+                                );
+
+
++--------------------------------------+                                        
+| status                               |
+|--------------------------------------|
+| Table EMPLOYEE successfully created. |
++--------------------------------------+
+
+PUT file:///Users/anton/Documents/projects/s
+                                                   nowflakeprojects/snowflake-playground/data/g
+                                                   etting-started/employees0*.csv  @playground.
+                                                   humanresources.%employee;
++-----------------+--------------------+-------------+-------------+--------------------+--------------------+----------+---------+
+| source          | target             | source_size | target_size | source_compression | target_compression | status   | message |
+|-----------------+--------------------+-------------+-------------+--------------------+--------------------+----------+---------|
+| employees01.csv | employees01.csv.gz |         370 |         304 | NONE               | GZIP               | UPLOADED |         |
+| employees02.csv | employees02.csv.gz |         364 |         288 | NONE               | GZIP               | UPLOADED |         |
+| employees03.csv | employees03.csv.gz |         407 |         304 | NONE               | GZIP               | UPLOADED |         |
+| employees04.csv | employees04.csv.gz |         375 |         304 | NONE               | GZIP               | UPLOADED |         |
+| employees05.csv | employees05.csv.gz |         404 |         304 | NONE               | GZIP               | UPLOADED |         |
++-----------------+--------------------+-------------+-------------+--------------------+--------------------+----------+---------+
+5 Row(s) produced. Time Elapsed: 1.213s
