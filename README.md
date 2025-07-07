@@ -33,3 +33,11 @@ For running the current line in query  Snowsight editor
 `Cmd + enter`   
 
 
+## Snowflake extension for VS Code  
+You can use this this extension to run the queries from within Code without having to go to the Snowsight IDE.  
+
+After installing go to the Extension on the left, complete the login credentials.  
+
+Now you can execuite SQL commands and see the result in VS Code.  
+
+
